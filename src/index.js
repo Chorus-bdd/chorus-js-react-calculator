@@ -1,11 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import registerServiceWorker from './registerServiceWorker';
+import './Calculator.css';
+import Calculator from './Calculator';
 import client, { clientOpened } from './chorusClient';
 
-const AppComponent = ReactDOM.render(<App />, document.getElementById('root'));
+const AppComponent = ReactDOM.render(<Calculator />, document.getElementById('app'));
 
 clientOpened.then(() => {
     console.log('Chorus Connection Opened!');
@@ -16,7 +15,5 @@ clientOpened.then(() => {
 
     client.stepsAligned();
 });
-
-registerServiceWorker();
 
 
