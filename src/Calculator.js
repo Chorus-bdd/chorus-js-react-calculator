@@ -88,6 +88,14 @@ class CalculatorKey extends React.Component {
     }
 }
 
+const CalculatorOperations = {
+    '/': (prevValue, nextValue) => prevValue / nextValue,
+    '*': (prevValue, nextValue) => prevValue * nextValue,
+    '+': (prevValue, nextValue) => prevValue + nextValue,
+    '-': (prevValue, nextValue) => prevValue - nextValue,
+    '=': (prevValue, nextValue) => nextValue
+};
+
 class Calculator extends React.Component {
 
     static propTypes = {
@@ -187,4 +195,4 @@ class Calculator extends React.Component {
 }
 
 
-export default Calculator;
+export { Calculator, CalculatorOperations }

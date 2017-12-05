@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './Calculator.css';
-import Calculator from './Calculator';
+import { Calculator, CalculatorOperations } from './Calculator';
 import client, { clientOpened } from './chorusClient';
 import { createStore } from 'redux'
 import { Provider, connect } from 'react-redux'
@@ -17,13 +17,6 @@ clientOpened.then(() => {
     client.stepsAligned();
 });
 
-const CalculatorOperations = {
-    '/': (prevValue, nextValue) => prevValue / nextValue,
-    '*': (prevValue, nextValue) => prevValue * nextValue,
-    '+': (prevValue, nextValue) => prevValue + nextValue,
-    '-': (prevValue, nextValue) => prevValue - nextValue,
-    '=': (prevValue, nextValue) => nextValue
-};
 
 const initialState = {
     storedValue: null,              //the value stored before the last operation
@@ -54,65 +47,69 @@ function createPerformOperationAction(operator) {
     }
 }
 
-
 // Reducer
 function counter(state = initialState, action) {
     
-    // let displayValue = undefined;
-    // let newValue = undefined;
-
+    function convertDisplayValueToPercent(displayValue) {
+        const fixedDigits = displayValue.replace(/^-?\d*\.?/, '');
+        const newValue = parseFloat(displayValue) / 100;
+        var result = {displayValue: String(newValue.toFixed(fixedDigits.length + 2))};
+        return result;
+    }
 
     switch (action.type) {
-        case 'clearAll':
+        case 'clearAll': {
             return initialState;
-        case 'clearDisplay':
-            return { displayValue: '0' };
-        case 'clearLastCharAction':
-            const { displayValue } = state;
-            return { displayValue: displayValue.substring(0, displayValue.length - 1) || '0' };
-        case 'toggleSign' :
-            const { displayValue } = this.state;
+        }
+        case 'clearDisplay': {
+            return Object.assign({}, state, {displayValue: '0'});
+        }
+        case 'clearLastCharAction': {
+            const {displayValue} = state;
+            return Object.assign({}, state, {displayValue: displayValue.substring(0, displayValue.length - 1) || '0'});
+        }
+        case 'toggleSign' : {
+            const {displayValue} = state;
             const newValue = parseFloat(displayValue) * -1;
-            return { displayValue: String(newValue) };
-        case 'inputPercent' :
-            const { displayValue } = this.state
-            const currentValue = parseFloat(displayValue)
+            return Object.assign({}, state, {displayValue: String(newValue)});
+        }
+        case 'inputPercent' : {
+            const {displayValue} = state;
+            const currentValue = parseFloat(displayValue);
+            
+            const changedValues = (currentValue === 0) ? {} : convertDisplayValueToPercent(displayValue);
+            return Object.assign({}, state, changedValues);
+        }
+        case 'inputDot' : {
+            const {displayValue} = state
 
-            if (currentValue === 0)
-                return
-
-            const fixedDigits = displayValue.replace(/^-?\d*\.?/, '')
-            const newValue = parseFloat(displayValue) / 100
-
-            return { displayValue: String(newValue.toFixed(fixedDigits.length + 2)) };
-        case 'inputDot' :
-            const { displayValue } = this.state
-
-            const result = (!(/\./).test(displayValue)) ? 
+            const changedValues = (!(/\./).test(displayValue)) ?
                 {
                     displayValue: displayValue + '.',
                     shouldClearOnNextDigit: false
                 } : {};
-            return result;
-        case 'inputDigitAction' :
-            const { displayValue, shouldClearOnNextDigit } = state
-            const { digit } = action
+            return Object.assign({}, state, changedValues);
+        }
+        case 'inputDigit' : {
+            const {displayValue, shouldClearOnNextDigit} = state;
+            const {digit} = action;
 
-            const result = (shouldClearOnNextDigit) ? {
-                    displayValue: String(digit),
-                    shouldClearOnNextDigit: false
-                } : {
-                    displayValue: displayValue === '0' ? String(digit) : displayValue + digit
-                };
-            return result;
-        case 'performOperation' :
-            const { storedValue, displayValue, storedOperator } = state
-            const { nextOperator } = action
-            const inputValue = parseFloat(displayValue)
+            const changedValues = (shouldClearOnNextDigit) ? {
+                displayValue: String(digit),
+                shouldClearOnNextDigit: false
+            } : {
+                displayValue: displayValue === '0' ? String(digit) : displayValue + digit
+            };
+            return Object.assign({}, state, changedValues);
+        }
+        case 'performOperation' : {
+            const {storedValue, displayValue, storedOperator} = state;
+            const {nextOperator} = action;
+            const inputValue = parseFloat(displayValue);
 
-            let result = {}
+            let changedValues = {}
             if (storedValue == null) {
-                result = {
+                changedValues = {
                     storedValue: inputValue,
                     shouldClearOnNextDigit: true,
                     storedOperator: nextOperator
@@ -121,14 +118,15 @@ function counter(state = initialState, action) {
                 const sv = storedValue || 0;
                 const newValue = CalculatorOperations[storedOperator](sv, inputValue);
 
-                result = {
+                changedValues = {
                     storedValue: newValue,
                     displayValue: String(newValue),
                     shouldClearOnNextDigit: true,
                     storedOperator: nextOperator
                 };
             }
-            return result;
+            return Object.assign({}, state, changedValues);
+        }
            
         default:
             return state
@@ -141,7 +139,10 @@ const store = createStore(counter);
 // Map Redux state to component props
 function mapStateToProps(state) {
     return {
-        count: state.count
+        storedValue : state.storedValue,
+        shouldClearOnNextDigit : state.shouldClearOnNextDigit,
+        storedOperator : state.storedOperator,
+        displayValue : state.displayValue
     }
 }
 
