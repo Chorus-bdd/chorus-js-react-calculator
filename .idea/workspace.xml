@@ -2,12 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d0a13b51-18fa-474a-9ed2-0d31da0c65b1" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/calculator/CalculatorContainer.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/calculator/CalculatorDuck.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Calculator.css" afterPath="$PROJECT_DIR$/src/calculator/Calculator.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Calculator.js" afterPath="$PROJECT_DIR$/src/calculator/Calculator.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/features/basic.feature" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/index.js" afterPath="$PROJECT_DIR$/src/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/yarn.lock" afterPath="$PROJECT_DIR$/yarn.lock" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -21,11 +20,11 @@
     <splitter split-orientation="vertical" split-proportion="0.7465681">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
+          <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/index.js">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="435">
-                  <caret line="29" column="0" lean-forward="true" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+                  <caret line="29" column="3" lean-forward="true" selection-start-line="29" selection-start-column="3" selection-end-line="29" selection-end-column="3" />
                   <folding>
                     <element signature="e#0#26#0" expanded="true" />
                   </folding>
@@ -33,21 +32,31 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="logo.svg" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/logo.svg">
+          <file leaf-file-name="basic.feature" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/test/features/basic.feature">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="0">
-                  <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+                <state relative-caret-position="60">
+                  <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/public/index.html">
+          <file leaf-file-name="DHTML.js" pinned="false" current-in-tab="false">
+            <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavaScriptLanguage.jar!/com/intellij/lang/javascript/index/predefined/DHTML.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="255">
-                  <caret line="17" column="48" lean-forward="false" selection-start-line="17" selection-start-column="48" selection-end-line="17" selection-end-column="48" />
+                <state relative-caret-position="226">
+                  <caret line="2578" column="0" lean-forward="false" selection-start-line="2578" selection-start-column="0" selection-end-line="2578" selection-end-column="0" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="chorusClient.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/chorusClient.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="150">
+                  <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
@@ -65,14 +74,34 @@
               </provider>
             </entry>
           </file>
+          <file leaf-file-name="App.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/App.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="0">
+                  <caret line="0" column="21" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
           <file leaf-file-name="CalculatorContainer.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/calculator/CalculatorContainer.js">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="495">
-                  <caret line="33" column="22" lean-forward="true" selection-start-line="33" selection-start-column="22" selection-end-line="33" selection-end-column="22" />
+                  <caret line="33" column="22" lean-forward="false" selection-start-line="33" selection-start-column="22" selection-end-line="33" selection-end-column="22" />
                   <folding>
                     <element signature="e#1#38#0" expanded="true" />
                   </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="App.test.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/App.test.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="0">
+                  <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+                  <folding />
                 </state>
               </provider>
             </entry>
@@ -81,40 +110,20 @@
             <entry file="file://$PROJECT_DIR$/src/calculator/CalculatorDuck.js">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="218">
-                  <caret line="115" column="32" lean-forward="true" selection-start-line="115" selection-start-column="32" selection-end-line="115" selection-end-column="32" />
+                  <caret line="115" column="32" lean-forward="false" selection-start-line="115" selection-start-column="32" selection-end-line="115" selection-end-column="32" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="DOMEvents.js" pinned="false" current-in-tab="false">
-            <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavaScriptLanguage.jar!/com/intellij/lang/javascript/index/predefined/DOMEvents.js">
+          <file leaf-file-name="package.json" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/package.json">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="640">
-                  <caret line="119" column="0" lean-forward="false" selection-start-line="119" selection-start-column="0" selection-end-line="119" selection-end-column="0" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/node_modules/prop-types/index.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="0">
-                  <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+                <state relative-caret-position="180">
+                  <caret line="12" column="23" lean-forward="false" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
                   <folding>
-                    <element signature="n#!!doc" expanded="true" />
+                    <marker date="1512493391000" expanded="true" signature="0:13" ph="{&quot;name&quot;: &quot;chorus-js-react-calculator&quot;...}" />
                   </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="Calculator.css" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/calculator/Calculator.css">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="352">
-                  <caret line="37" column="6" lean-forward="true" selection-start-line="37" selection-start-column="6" selection-end-line="37" selection-end-column="6" />
-                  <folding />
                 </state>
               </provider>
             </entry>
@@ -127,7 +136,7 @@
             <entry file="file://$PROJECT_DIR$/src/index.js">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="300">
-                  <caret line="20" column="35" lean-forward="true" selection-start-line="20" selection-start-column="35" selection-end-line="20" selection-end-column="35" />
+                  <caret line="32" column="35" lean-forward="false" selection-start-line="32" selection-start-column="35" selection-end-line="32" selection-end-column="35" />
                   <folding>
                     <element signature="e#0#26#0" expanded="true" />
                   </folding>
@@ -139,7 +148,7 @@
             <entry file="file://$PROJECT_DIR$/src/calculator/Calculator.js">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="270">
-                  <caret line="18" column="30" lean-forward="true" selection-start-line="18" selection-start-column="30" selection-end-line="18" selection-end-column="30" />
+                  <caret line="18" column="30" lean-forward="false" selection-start-line="18" selection-start-column="30" selection-end-line="18" selection-end-column="30" />
                   <folding>
                     <element signature="e#0#26#0" expanded="true" />
                   </folding>
@@ -183,15 +192,16 @@
         <option value="$PROJECT_DIR$/src/App.js" />
         <option value="$PROJECT_DIR$/features/basic.feature" />
         <option value="$PROJECT_DIR$/src/Calculator.css" />
-        <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/public/index.html" />
         <option value="$PROJECT_DIR$/src/Calculator.js" />
         <option value="$PROJECT_DIR$/src/calculator/CalculatorReducer.js" />
         <option value="$PROJECT_DIR$/src/calculator/CalculatorActions.js" />
-        <option value="$PROJECT_DIR$/src/index.js" />
         <option value="$PROJECT_DIR$/src/calculator/Calculator.js" />
         <option value="$PROJECT_DIR$/src/calculator/CalculatorDuck.js" />
         <option value="$PROJECT_DIR$/src/calculator/CalculatorContainer.js" />
+        <option value="$PROJECT_DIR$/package.json" />
+        <option value="$PROJECT_DIR$/src/index.js" />
+        <option value="$PROJECT_DIR$/src/test/features/basic.feature" />
       </list>
     </option>
   </component>
@@ -267,53 +277,29 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="features" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="chorus-js-react-calculator" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="chorus-js-react-calculator" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="calculator" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="chorus-js-react-calculator" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="chorus-js-react-calculator" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="chorus-js-react-calculator" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="chorus-js-react-calculator" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="node_modules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="chorus-js-react-calculator" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="chorus-js-react-calculator" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="node_modules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="prop-types" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -336,6 +322,7 @@
       <recent name="$PROJECT_DIR$/src/calculator" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/test/features" />
       <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$/features" />
       <recent name="$PROJECT_DIR$/build" />
@@ -661,12 +648,12 @@
       <workItem from="1509978298044" duration="7982000" />
       <workItem from="1511792143003" duration="4620000" />
       <workItem from="1512386364323" duration="44000" />
-      <workItem from="1512386473783" duration="23250000" />
+      <workItem from="1512386473783" duration="24985000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="43840000" />
+    <option name="totallyTimeSpent" value="45575000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1280" y="23" width="1280" height="1505" extended-state="0" />
@@ -733,116 +720,12 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/App.test.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="600">
-            <caret line="40" column="30" lean-forward="false" selection-start-line="40" selection-start-column="30" selection-end-line="40" selection-end-column="30" />
-            <folding>
-              <marker date="1509735371000" expanded="true" signature="12363:12391" ph="{...}" />
-              <marker date="1509735371000" expanded="true" signature="13784:14114" ph="{&quot;version&quot;: &quot;0.2.0&quot;...}" />
-              <marker date="1509735371000" expanded="true" signature="13828:14112" ph="[...]" />
-              <marker date="1509735371000" expanded="true" signature="13829:14111" ph="{&quot;name&quot;: &quot;Chrome&quot;...}" />
-              <marker date="1509735371000" expanded="true" signature="14004:14052" ph="{&quot;webpack:///src/*&quot;: &quot;${webRoot}/*&quot;...}" />
-              <marker date="1509735371000" expanded="true" signature="14059:14107" ph="{&quot;webpack:///src/*&quot;: &quot;${webRoot}/*&quot;...}" />
-              <marker date="1509735371000" expanded="true" signature="19175:19206" ph="{...}" />
-              <marker date="1509735371000" expanded="true" signature="19188:19204" ph="{...}" />
-              <marker date="1509735371000" expanded="true" signature="19312:19377" ph="..." />
-              <marker date="1509735371000" expanded="true" signature="19456:19511" ph="{...}" />
-              <marker date="1509735371000" expanded="true" signature="19469:19509" ph="{...}" />
-              <marker date="1509735371000" expanded="true" signature="19572:19627" ph="{...}" />
-              <marker date="1509735371000" expanded="true" signature="19585:19625" ph="{...}" />
-              <marker date="1509735371000" expanded="true" signature="21373:21670" ph="{...}" />
-              <marker date="1509735371000" expanded="true" signature="21397:21547" ph="{...}" />
-              <marker date="1509735371000" expanded="true" signature="21452:21484" ph="{...}" />
-              <marker date="1509735371000" expanded="true" signature="21506:21541" ph="{...}" />
-              <marker date="1509735371000" expanded="true" signature="21561:21668" ph="{...}" />
-              <marker date="1509735371000" expanded="true" signature="21582:21657" ph="&lt;div/&gt;" />
-              <marker date="1509735371000" expanded="true" signature="21622:21657" ph="{...}" />
-              <marker date="1509735371000" expanded="true" signature="21677:21784" ph="{...}" />
-              <marker date="1509735371000" expanded="true" signature="21698:21773" ph="&lt;div/&gt;" />
-              <marker date="1509735371000" expanded="true" signature="22603:22623" ph="{...}" />
-              <marker date="1509735371000" expanded="true" signature="22659:22716" ph="..." />
-              <marker date="1509735371000" expanded="true" signature="22798:22903" ph="{...}" />
-              <marker date="1509735371000" expanded="true" signature="22811:22901" ph="{...}" />
-              <marker date="1509735371000" expanded="true" signature="23982:24048" ph="{...}" />
-              <marker date="1509735371000" expanded="true" signature="24081:24368" ph="{...}" />
-              <marker date="1509735371000" expanded="true" signature="24098:24164" ph="{...}" />
-              <marker date="1509735371000" expanded="true" signature="29880:29930" ph="..." />
-              <marker date="1509735371000" expanded="true" signature="30037:30124" ph="{...}" />
-              <marker date="1509735371000" expanded="true" signature="30450:30490" ph="{...}" />
-              <marker date="1509735371000" expanded="true" signature="33206:33471" ph="{...}" />
-              <marker date="1509735371000" expanded="true" signature="33210:33404" ph="//..." />
-              <marker date="1509735371000" expanded="true" signature="35906:35990" ph="..." />
-              <marker date="1509735371000" expanded="true" signature="35991:36095" ph="//..." />
-              <marker date="1509735371000" expanded="true" signature="41262:41409" ph="..." />
-              <marker date="1509735371000" expanded="true" signature="41349:41402" ph="..." />
-              <marker date="1509735371000" expanded="true" signature="41859:41885" ph="{...}" />
-              <marker date="1509735371000" expanded="true" signature="50776:50889" ph="{...}" />
-              <marker date="1509735371000" expanded="true" signature="50798:50878" ph="{...}" />
-              <marker date="1509735371000" expanded="true" signature="50812:50874" ph="{...}" />
-              <marker date="1509735371000" expanded="true" signature="51232:51832" ph="{...}" />
-              <marker date="1509735371000" expanded="true" signature="51254:51821" ph="{...}" />
-              <marker date="1509735371000" expanded="true" signature="51314:51378" ph="{...}" />
-              <marker date="1509735371000" expanded="true" signature="51438:51564" ph="{...}" />
-              <marker date="1509735371000" expanded="true" signature="51507:51545" ph="{...}" />
-              <marker date="1509735371000" expanded="true" signature="51646:51693" ph="{...}" />
-              <marker date="1509735371000" expanded="true" signature="51771:51817" ph="{...}" />
-              <marker date="1509735371000" expanded="true" signature="52763:53175" ph="{...}" />
-              <marker date="1509735371000" expanded="true" signature="52785:53164" ph="{...}" />
-              <marker date="1509735371000" expanded="true" signature="52802:53160" ph="{...}" />
-              <marker date="1509735371000" expanded="true" signature="52889:53124" ph="//..." />
-              <marker date="1509735371000" expanded="true" signature="54283:54412" ph="..." />
-              <marker date="1509735371000" expanded="true" signature="54292:54412" ph="..." />
-              <marker date="1509735371000" expanded="true" signature="56108:56204" ph="&lt;html/&gt;" />
-              <marker date="1509735371000" expanded="true" signature="56127:56204" ph="&lt;head/&gt;" />
-              <marker date="1509735371000" expanded="true" signature="56138:56204" ph="&lt;script/&gt;" />
-              <marker date="1509735371000" expanded="true" signature="56220:56316" ph="&lt;html/&gt;" />
-              <marker date="1509735371000" expanded="true" signature="56239:56316" ph="&lt;head/&gt;" />
-              <marker date="1509735371000" expanded="true" signature="56250:56316" ph="&lt;script/&gt;" />
-              <marker date="1509735371000" expanded="true" signature="60084:60151" ph="{...}" />
-              <marker date="1509735371000" expanded="true" signature="61031:61109" ph="..." />
-              <marker date="1509735371000" expanded="true" signature="61148:61229" ph="{...}" />
-              <marker date="1509735371000" expanded="true" signature="61260:61341" ph="{...}" />
-              <marker date="1509735371000" expanded="true" signature="62482:62557" ph="..." />
-              <marker date="1509735371000" expanded="true" signature="62657:62735" ph="..." />
-              <marker date="1509735371000" expanded="true" signature="62769:62847" ph="..." />
-              <marker date="1509735371000" expanded="true" signature="62774:62797" ph="{...}" />
-              <marker date="1509735371000" expanded="true" signature="62886:62909" ph="{...}" />
-              <marker date="1509735371000" expanded="true" signature="63708:63786" ph="..." />
-              <marker date="1509735371000" expanded="true" signature="63824:64014" ph="{...}" />
-              <marker date="1509735371000" expanded="true" signature="65472:65522" ph="..." />
-              <marker date="1509735371000" expanded="true" signature="65584:65634" ph="..." />
-              <marker date="1509735371000" expanded="true" signature="65995:66061" ph="{...}" />
-              <marker date="1509735371000" expanded="true" signature="67389:67806" ph="{&quot;name&quot;: &quot;your-package&quot;...}" />
-              <marker date="1509735371000" expanded="true" signature="67427:67804" ph="{...}" />
-              <marker date="1509735371000" expanded="true" signature="67457:67557" ph="[...]" />
-              <marker date="1509735371000" expanded="true" signature="67584:67712" ph="{...}" />
-              <marker date="1509735371000" expanded="true" signature="67602:67706" ph="{&quot;branches&quot;: 90...}" />
-              <marker date="1509735371000" expanded="true" signature="70012:70130" ph="{...}" />
-              <marker date="1509735371000" expanded="true" signature="84529:84593" ph="{...}" />
-              <marker date="1509735371000" expanded="true" signature="106841:106889" ph="..." />
-              <marker date="1509735371000" expanded="true" signature="107031:107106" ph="..." />
-            </folding>
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
           <caret line="19" column="30" lean-forward="false" selection-start-line="19" selection-start-column="30" selection-end-line="19" selection-end-column="30" />
           <folding>
-            <marker date="1512392837000" expanded="true" signature="0:13" ph="{&quot;name&quot;: &quot;chorus-js-react-calculator&quot;...}" />
+            <marker date="1512493391000" expanded="true" signature="0:13" ph="{&quot;name&quot;: &quot;chorus-js-react-calculator&quot;...}" />
           </folding>
         </state>
       </provider>
@@ -932,7 +815,7 @@
         <state relative-caret-position="210">
           <caret line="14" column="3" lean-forward="false" selection-start-line="14" selection-start-column="3" selection-end-line="14" selection-end-column="3" />
           <folding>
-            <marker date="1512392837000" expanded="true" signature="0:13" ph="{&quot;name&quot;: &quot;chorus-js-react-calculator&quot;...}" />
+            <marker date="1512493391000" expanded="true" signature="0:13" ph="{&quot;name&quot;: &quot;chorus-js-react-calculator&quot;...}" />
           </folding>
         </state>
       </provider>
@@ -1023,14 +906,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/chorusClient.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -1128,14 +1003,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/registerServiceWorker.js" />
-    <entry file="file://$PROJECT_DIR$/src/App.test.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/App.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
@@ -1148,14 +1015,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/App.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="21" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1173,22 +1032,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" column="0" lean-forward="true" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-          <folding>
-            <marker date="1512392837000" expanded="true" signature="0:13" ph="{&quot;name&quot;: &quot;chorus-js-react-calculator&quot;...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/prop-types/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="n#!!doc" expanded="true" />
+            <element signature="n#!!doc" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1228,7 +1077,7 @@
     <entry file="file://$PROJECT_DIR$/src/calculator/Calculator.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="352">
-          <caret line="37" column="6" lean-forward="true" selection-start-line="37" selection-start-column="6" selection-end-line="37" selection-end-column="6" />
+          <caret line="37" column="6" lean-forward="false" selection-start-line="37" selection-start-column="6" selection-end-line="37" selection-end-column="6" />
           <folding />
         </state>
       </provider>
@@ -1246,7 +1095,7 @@
     <entry file="file://$PROJECT_DIR$/src/calculator/CalculatorDuck.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="218">
-          <caret line="115" column="32" lean-forward="true" selection-start-line="115" selection-start-column="32" selection-end-line="115" selection-end-column="32" />
+          <caret line="115" column="32" lean-forward="false" selection-start-line="115" selection-start-column="32" selection-end-line="115" selection-end-column="32" />
           <folding />
         </state>
       </provider>
@@ -1254,9 +1103,51 @@
     <entry file="file://$PROJECT_DIR$/src/calculator/CalculatorContainer.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="495">
-          <caret line="33" column="22" lean-forward="true" selection-start-line="33" selection-start-column="22" selection-end-line="33" selection-end-column="22" />
+          <caret line="33" column="22" lean-forward="false" selection-start-line="33" selection-start-column="22" selection-end-line="33" selection-end-column="22" />
           <folding>
             <element signature="e#1#38#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavaScriptLanguage.jar!/com/intellij/lang/javascript/index/predefined/DHTML.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="226">
+          <caret line="2578" column="0" lean-forward="false" selection-start-line="2578" selection-start-column="0" selection-end-line="2578" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="21" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/chorusClient.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App.test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="23" lean-forward="false" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
+          <folding>
+            <marker date="1512493391000" expanded="true" signature="0:13" ph="{&quot;name&quot;: &quot;chorus-js-react-calculator&quot;...}" />
           </folding>
         </state>
       </provider>
@@ -1264,10 +1155,18 @@
     <entry file="file://$PROJECT_DIR$/src/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="435">
-          <caret line="29" column="0" lean-forward="true" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+          <caret line="29" column="3" lean-forward="true" selection-start-line="29" selection-start-column="3" selection-end-line="29" selection-end-column="3" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/features/basic.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
