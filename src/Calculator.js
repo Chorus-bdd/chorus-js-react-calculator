@@ -1,5 +1,7 @@
 import React from 'react';
 import PointTarget from 'react-point';
+import PropTypes from 'prop-types';
+
 
 // const PointTarget = ReactPoint.PointTarget
 
@@ -42,6 +44,10 @@ class AutoScalingText extends React.Component {
 }
 
 class CalculatorDisplay extends React.Component {
+    static propTypes = {
+        value: PropTypes.string.isRequired
+    };
+    
     render() {
         const { value, ...props } = this.props
 
@@ -66,6 +72,11 @@ class CalculatorDisplay extends React.Component {
 }
 
 class CalculatorKey extends React.Component {
+    static propTypes = {
+        onPress: PropTypes.func.isRequired,
+        className: PropTypes.string.isRequired
+    };
+    
     render() {
         const { onPress, className, ...props } = this.props
 
@@ -86,18 +97,24 @@ const CalculatorOperations = {
 }
 
 class Calculator extends React.Component {
+
+    static propTypes = {
+        count: PropTypes.number.isRequired
+    };
+
+
     state = {
-        value: null,
-        displayValue: '0',
-        operator: null,
+        storedValue: null,        //the value stored before the last operation
+        displayValue: '0',        //value on screen
+        storedOperator: null,     //stored operator 
         waitingForOperand: false
     };
 
     clearAll() {
         this.setState({
-            value: null,
+            storedValue: null,
             displayValue: '0',
-            operator: null,
+            storedOperator: null,
             waitingForOperand: false
         })
     }
@@ -164,29 +181,31 @@ class Calculator extends React.Component {
                 displayValue: displayValue === '0' ? String(digit) : displayValue + digit
             })
         }
+
+        this.props.onIncreaseClick();
     }
 
     performOperation(nextOperator) {
-        const { value, displayValue, operator } = this.state
+        const { storedValue, displayValue, storedOperator } = this.state
         const inputValue = parseFloat(displayValue)
 
-        if (value == null) {
+        if (storedValue == null) {
             this.setState({
-                value: inputValue
+                storedValue: inputValue
             })
-        } else if (operator) {
-            const currentValue = value || 0
-            const newValue = CalculatorOperations[operator](currentValue, inputValue)
+        } else if (storedOperator) {
+            const sv = storedValue || 0;
+            const newValue = CalculatorOperations[storedOperator](sv, inputValue);
 
             this.setState({
-                value: newValue,
+                storedValue: newValue,
                 displayValue: String(newValue)
             })
         }
 
         this.setState({
             waitingForOperand: true,
-            operator: nextOperator
+            storedOperator: nextOperator
         })
     }
 
@@ -231,13 +250,15 @@ class Calculator extends React.Component {
     }
 
     render() {
-        const { displayValue } = this.state
+        const { displayValue } = this.state;
+        const { count } = this.props;
 
         const clearDisplay = displayValue !== '0'
         const clearText = clearDisplay ? 'C' : 'AC'
 
         return (
             <div className="calculator">
+                <p color="red">Count: {count}</p>
                 <CalculatorDisplay value={displayValue}/>
                 <div className="calculator-keypad">
                     <div className="input-keys">
@@ -272,5 +293,6 @@ class Calculator extends React.Component {
         )
     }
 }
+
 
 export default Calculator;
