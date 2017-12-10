@@ -18,6 +18,6 @@ These then are the steps require to set everything up:
 
 Once this is done you can  navigate to the place you checked out this project and run the tests with the command: 
 
-`chorus -f ./src/test`
+`chorus -f ./features`
 
 
