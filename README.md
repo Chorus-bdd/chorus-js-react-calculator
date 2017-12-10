@@ -6,17 +6,15 @@ A sample project which demonstrates how Chorus 3.0.x can be used to test a React
 
 *Chorus 3.0.x is an early access build, there may be changes before the official 3.0.0 release* 
 
-You will need Java version 8+ on your system, in addition to yarn and chromedriver
+You will need **Java version 8+** on your system, in addition to **yarn** and **chromedriver**
 
-The other dependency is , since Chorus uses this to open Chrome and navigate the browser to the correct page
+The Chorus interpreter has been packaged as a tar.gz, and once installed/unzipped can be invoked from the command line
 
-The Chorus interpreter itself has been packaged as a tar.gz, and once installed/unzipped can be invoked using a command line script, 
-
-These then are the steps require to set everything up:
+These are the steps require to set everything up:
  
  * Ensure you have Java 8+ available (java -v to test this)
  * Make sure you have [Chrome Driver](https://sites.google.com/a/chromium.org/chromedriver/) installed
- * Download the latest Chorus tarball from the Chorus interpreter's github repo at [https://github.com/Chorus-bdd/Chorus/releases], unzip it, and add the unzipped folder containing chorus.sh to your system PATH
+ * Download the latest 3.0.x Chorus tarball from the Chorus interpreter's github repo at [https://github.com/Chorus-bdd/Chorus/releases], unzip it, and add the unzipped folder containing chorus.sh to your system PATH
 
 Once this is done you can  navigate to the place you checked out this project and build and start the web site with the commands:
 
