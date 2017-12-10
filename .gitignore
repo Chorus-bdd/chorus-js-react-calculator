@@ -21,3 +21,6 @@ yarn-debug.log*
 yarn-error.log*
 /.idea/
 /chorus-interpreter/
+/chorus-js-react-calculator.iml
+/chorus-js-react-calculator.ipr
+/chorus-js-react-calculator.iws
