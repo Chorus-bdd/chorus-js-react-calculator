@@ -103,7 +103,7 @@ trap kill_webpack_dev_server SIGINT SIGTERM EXIT
 
 info "Executing chorus tests..."
 
-chorus -f ${FEATURES_DIR}
+$CHORUS_INTERPRETER_DIR/chorus -f ${FEATURES_DIR}
 EXIT_CODE=$?
 
 if [ ${EXIT_CODE} -ne 0 ] ; then
