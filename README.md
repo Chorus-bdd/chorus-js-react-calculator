@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/nickebbutt/chorus-js-react-calculator.svg?branch=master)](https://travis-ci.org/nickebbutt/chorus-js-react-calculator)
+[![Build Status](https://travis-ci.org/Chorus-bdd/chorus-js-react-calculator.svg?branch=master)](https://travis-ci.org/Chorus-bdd/chorus-js-react-calculator)
 
 ## Chorus React-Redux Calculator
 
