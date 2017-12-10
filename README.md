@@ -2,7 +2,7 @@
 
 ## Chorus React-Redux Calculator
 
-A sample project which demonstrates how Chorus can be used to test a React / Redux APP
+A sample project which demonstrates how Chorus 3.0.x can be used to test a React / Redux APP
 
 You will need Java version 8+ on your system, in addition to yarn and chromedriver
 
@@ -14,7 +14,7 @@ These then are the steps require to set everything up:
  
  * Ensure you have Java 8+ available (java -v to test this)
  * Make sure you have [Chrome Driver](https://sites.google.com/a/chromium.org/chromedriver/) installed
- * Download the latest Chorus release from the Chorus interpreter's github repo at [https://github.com/Chorus-bdd/Chorus/releases], unzip it, and add the unzipped folder containing chorus.sh to your system PATH
+ * Download the latest Chorus tarball from the Chorus interpreter's github repo at [https://github.com/Chorus-bdd/Chorus/releases], unzip it, and add the unzipped folder containing chorus.sh to your system PATH
 
 Once this is done you can  navigate to the place you checked out this project and build and start the web site with the commands:
 
