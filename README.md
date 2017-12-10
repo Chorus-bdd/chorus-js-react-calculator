@@ -4,6 +4,8 @@
 
 A sample project which demonstrates how Chorus 3.0.x can be used to test a React / Redux APP
 
+*Chorus 3.0.x is an early access build, there may be changes before the official 3.0.0 release* 
+
 You will need Java version 8+ on your system, in addition to yarn and chromedriver
 
 The other dependency is , since Chorus uses this to open Chrome and navigate the browser to the correct page
