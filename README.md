@@ -19,7 +19,7 @@ These are the steps require to set everything up:
 Once this is done you can  navigate to the place you checked out this project and build and start the web site with the commands:
 
 * yarn install
-* yarn test
+* yarn start
 
 and in another shell, you can then run the chorus tests from the command line:
 
