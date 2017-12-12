@@ -26,8 +26,6 @@ and in another shell, you can then run the chorus tests from the command line:
 * `chorus -f ./features`
 
 
-Once the above is working, the script ./e2e should also work - this is the automated test which is run using Travis
-
 ### Running Chorus tests duing CI/CD
 
 A .travis.yml config and an ./e2e script are provided in the root directory, which provide an example of how you can set up Chorus tests to run in a CI tool such as Travis  
