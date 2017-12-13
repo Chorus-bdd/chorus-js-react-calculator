@@ -31,3 +31,8 @@ and in another shell, you can then run the chorus tests from the command line:
 A .travis.yml config and an ./e2e script are provided in the root directory, which provide an example of how you can set up Chorus tests to run in a CI tool such as Travis  
 These tests are run after every commit to this Github repo
 
+#### Acknowledgements
+
+Thanks to Michael Jackson for open sourcing the original HTML5/CSS Calculator on which this Redux / Chorus conversion was based 
+https://codepen.io/mjijackson/pen/xOzyGX
+
