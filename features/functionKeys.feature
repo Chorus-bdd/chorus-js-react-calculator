@@ -1,4 +1,4 @@
-Uses: StepRegistry
+Uses: Web Sockets
 Uses: Selenium
 Uses: Chorus Context
 Uses: Timers
@@ -6,12 +6,12 @@ Uses: Timers
 Feature: Function Keys
   
   The function keys work as expected
-  
-  #! StepRegistry start
+
   Feature-Start:
-    Given I open Chrome
+    Given I start a web socket server
+    And I open Chrome
     And I navigate to http://localhost:3000
-    And StepRegistry client SimpleStepPublisher is connected
+    And I wait for the web socket client SimpleStepPublisher
   
   Background:
     Given I clear the calculator

@@ -1,18 +1,17 @@
-Uses: StepRegistry
+Uses: Web Sockets
 Uses: Selenium
 Uses: Chorus Context
 Uses: Timers
 
 Feature: Simple Operations
   
-  I can perform simple additions, subtractions, additions and multiplications
-  
+  I can perform simple additions, subtractions, divisions and multiplications
 
-  #! StepRegistry start
   Feature-Start:
-    Given I open Chrome
+    Given I start a web socket server
+    And I open Chrome
     And I navigate to http://localhost:3000
-    And StepRegistry client SimpleStepPublisher is connected
+    And I wait for the web socket client SimpleStepPublisher
   
   Background:
     Given I clear the calculator
