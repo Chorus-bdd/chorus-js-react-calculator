@@ -14,7 +14,7 @@ docker pull selenium/node-chrome-debug:3.9.1
 docker pull node:8.9.1
 
 echo "Starting Docker services..."
-docker-compose up hub firefox chrome chorus-react-calculator > docker-services.log 2>&1 &
+docker-compose up hub chrome chorus-react-calculator > docker-services.log 2>&1 &
 if [ $? -ne 0 ] ; then
   echo "Failed to start Docker services"
   exit 1
