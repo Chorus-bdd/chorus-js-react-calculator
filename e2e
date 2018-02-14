@@ -33,6 +33,8 @@ exit_if_failed () {
 
 cleanup() {
     docker-compose stop
+    info "Logs from Docker Services:"
+    cat docker-services.log
 }
 
 info "Starting Docker services..."
