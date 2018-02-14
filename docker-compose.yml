@@ -54,7 +54,7 @@ services:
       - chorus-react-calculator
     volumes:
       - ./features:/features
-    command: dockerize -wait tcp://firefox:5900 -wait tcp://chrome:5900 -wait tcp://hub:4444 -wait http://chorus-react-calculator:80 -timeout 30s chorus -f /features
+    command: dockerize -wait tcp://firefox:5900 -wait tcp://chrome:5900 -wait tcp://hub:4444 -wait http://chorus-react-calculator:80 -timeout 90s chorus -f /features
 
 
 
