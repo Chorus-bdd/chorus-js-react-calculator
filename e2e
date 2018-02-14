@@ -2,50 +2,30 @@
 
 trap cleanup EXIT
 
-info () {
-	yellow=`tput setaf 3`
-	reset=`tput sgr0`
-	echo "${yellow}‣ $1${reset}"
-}
-
-success () {
-	green=`tput setaf 2`
-	reset=`tput sgr0`
-	echo "${green}✓ $1${reset}"
-}
-
-error () {
-	red=`tput setaf 1`
-	reset=`tput sgr0`
-	echo "${red}✗ $1${reset}"
-}
-
-show_error_and_exit () {
-	error "$1"
-	exit 1
-}
-
-exit_if_failed () {
-	if [ $? -ne 0 ]; then
-		show_error_and_exit "$1"
-	fi
-}
-
 cleanup() {
     docker-compose stop
 }
 
-info "Starting Docker services..."
+echo "Starting Docker services..."
 docker-compose up hub firefox chrome chorus-react-calculator > docker-services.log 2>&1 &
-exit_if_failed "Failed to start Docker services"
-
-docker-compose run chorus-interpreter
 if [ $? -ne 0 ] ; then
-  echo "Exit code from Chorus was $?"
+  echo "Failed to start Docker services"
+  exit 1
+fi
+
+docker-compose up chorus-interpreter
+
+# We have to pick up the exit code using docker inspect
+LAST_CONTAINER_ID=`docker ps -l -q`
+EXIT_CODE=`docker inspect ${LAST_CONTAINER_ID} --format='{{.State.ExitCode}}'`
+
+if [ ${EXIT_CODE} -ne 0 ] ; then
+  echo "Exit code from Chorus interpreter was ${EXIT_CODE}"
   echo "Service logs:"
   cat docker-services.log
-  show_error_and_exit "Tests Failed"
+  echo "Tests Failed"
+  exit 1
 else
-  info "Success!"
+  echo "Success!"
 fi
   

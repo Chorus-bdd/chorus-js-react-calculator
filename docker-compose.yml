@@ -1,5 +1,6 @@
 version: "2.1"
 services:
+
   hub:
     image: selenium/hub:3.9.1
     ports:
@@ -50,11 +51,10 @@ services:
     image: chorusbdd/chorus-interpreter
     ports:
       - "9080:9080"
-    depends_on:
-      - chorus-react-calculator
     volumes:
       - ./features:/features
     command: dockerize -wait tcp://firefox:5900 -wait tcp://chrome:5900 -wait tcp://hub:4444 -wait http://chorus-react-calculator:80 -timeout 90s chorus -f /features
+
 
 
 
