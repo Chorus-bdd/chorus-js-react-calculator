@@ -9,9 +9,9 @@ Feature: Function Keys
 
   Feature-Start:
     Given I start a web socket server
-    And I open Chrome
-    And I navigate to http://localhost:3000
-    And I wait for the web socket client SimpleStepPublisher
+    And I open the RemoteWebDriver browser
+    And I navigate to ${calculatorURL}
+    And I wait for the web socket client CalculatorStepPublisher
   
   Background:
     Given I clear the calculator
