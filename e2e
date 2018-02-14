@@ -33,8 +33,6 @@ exit_if_failed () {
 
 cleanup() {
     docker-compose stop
-    info "Logs from Docker Services:"
-    cat docker-services.log
 }
 
 info "Starting Docker services..."
@@ -43,5 +41,12 @@ echo "Exit code $?"
 exit_if_failed "Failed to start Docker services"
 
 docker-compose up chorus-interpreter
-exit_if_failed "Tests Failed"
-
+if [ $? -ne 0 ] ; then
+  echo "Exit code from Chorus was $?"
+  echo "Service logs:"
+  cat docker-services.log
+  show_error_and_exit "Tests Failed"
+else
+  info "Success!"
+fi
+  
