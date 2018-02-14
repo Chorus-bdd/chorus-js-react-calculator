@@ -19,7 +19,6 @@ Feature: Function Keys
   Scenario: I can reverse the sign of a number using the sign key
     When I press the 5 key
     And I press the sign key
-    And this step will fail
     Then the display shows -5
 
   Scenario: The percent key works by dividing the displayed number by 100
