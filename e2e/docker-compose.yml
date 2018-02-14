@@ -40,7 +40,7 @@ services:
       - "9000:80"
     working_dir: /usr/src/app
     volumes:
-      - ./:/usr/src/app
+      - ../:/usr/src/app
     command: bash -c "yarn install && PORT=80 yarn start"
     healthcheck:
       test: ["CMD-SHELL", "curl -f http://localhost && echo 'OK'"]
@@ -48,11 +48,11 @@ services:
       retries: 15
 
   chorus-interpreter:
-    image: chorusbdd/chorus-interpreter
+    image: chorusbdd/chorus-interpreter:3.0.0-DEV32
     ports:
       - "9080:9080"
     volumes:
-      - ./features:/features
+      - ../features:/features
     command: dockerize -wait tcp://firefox:5900 -wait tcp://chrome:5900 -wait tcp://hub:4444 -wait http://chorus-react-calculator:80 -timeout 90s chorus -f /features
 
 

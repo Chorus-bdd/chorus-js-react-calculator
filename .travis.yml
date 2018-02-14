@@ -1,6 +1,6 @@
 sudo: required
 language: java
-script: ./e2e
+script: cd e2e && ./e2e.sh
 branches:
   only: dockerize
 cache:
