@@ -24,3 +24,4 @@ yarn-error.log*
 /chorus-js-react-calculator.iml
 /chorus-js-react-calculator.ipr
 /chorus-js-react-calculator.iws
+/docker-services.log
