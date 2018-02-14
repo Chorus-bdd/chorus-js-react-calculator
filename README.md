@@ -6,30 +6,35 @@ A sample project which demonstrates how Chorus 3.0.x can be used to test a React
 
 *Chorus 3.0.x is an early access build, there may be changes before the official 3.0.0 release* 
 
-You will need **Java version 8+** on your system, in addition to **yarn** and **chromedriver**
+### Building and Running the calculator app
 
-The Chorus interpreter has been packaged as a tar.gz, and once installed/unzipped can be invoked from the command line
+You will need yarn and node installed to build the web app locally
 
-These are the steps require to set everything up:
- 
- * Ensure you have Java 8+ available (java -v to test this)
- * Make sure you have [Chrome Driver](https://sites.google.com/a/chromium.org/chromedriver/) installed
- * Download the latest 3.0.x Chorus tarball from the Chorus interpreter's github repo at [https://github.com/Chorus-bdd/Chorus/releases], unzip it, and add the unzipped folder containing chorus.sh to your system PATH
+* `yarn install`
 
-Once this is done you can  navigate to the place you checked out this project and build and start the web site with the commands:
+Once installed you can start it with
 
-* yarn install
-* yarn start
+* `yarn start`
 
-and in another shell, you can then run the chorus tests from the command line:
+And open a browser at localhost:3000
 
-* `chorus -f ./features`
+### Running tests with Chorus 
 
+The Chorus interpreter is packaged as a Docker image and the tests are run with `docker-compose`
+This prevents you having to install Chorus (and Java) locally, and the only dependency is Docker :)
 
-### Running Chorus tests duing CI/CD
+A docker-compose.yml is included under ./e2e which includes images for 
 
-A .travis.yml config and an ./e2e script are provided in the root directory, which provide an example of how you can set up Chorus tests to run in a CI tool such as Travis  
-These tests are run after every commit to this Github repo
+* Selenium Hub, Firefox and Chrome.
+* node - to serve the html and js resources for the Calculator single page app
+* chorus-interpreter - to run the chorus tests under ./feature, using Selenium
+
+Once you have docker installed and working, then you can run the Chorus features with:
+
+* `yarn e2e`
+
+This will run the script under e2e/e2e.sh, which starts up the docker cluster - and the Chorus image will run all the feature files under ./feature
+
 
 #### Acknowledgements
 
