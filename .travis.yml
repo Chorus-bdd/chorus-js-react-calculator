@@ -1,5 +1,5 @@
 sudo: required
-language: java
+language: javascript
 script: cd e2e && ./e2e.sh
 branches:
   only: master
