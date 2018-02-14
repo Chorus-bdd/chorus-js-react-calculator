@@ -6,19 +6,19 @@ services:
     ports:
       - "4444:4444"
 
-  firefox:
-    image: selenium/node-firefox-debug:3.9.1
-    ports:
-      - "5911:5900"
-    environment:
-    - HUB_PORT_4444_TCP_ADDR=hub
-    - HUB_PORT_4444_TCP_PORT=4444
-    depends_on:
-      - hub
-    healthcheck:
-      test: bash -c "wget -O - http://hub:4444/grid/console 2>&1 | grep \"browserName=firefox\" "
-      interval: 10s
-      retries: 13
+#  firefox:
+#    image: selenium/node-firefox-debug:3.9.1
+#    ports:
+#      - "5911:5900"
+#    environment:
+#    - HUB_PORT_4444_TCP_ADDR=hub
+#    - HUB_PORT_4444_TCP_PORT=4444
+#    depends_on:
+#      - hub
+#    healthcheck:
+#      test: bash -c "wget -O - http://hub:4444/grid/console 2>&1 | grep \"browserName=firefox\" "
+#      interval: 10s
+#      retries: 13
 
   chrome:
     image: selenium/node-chrome-debug:3.9.1
