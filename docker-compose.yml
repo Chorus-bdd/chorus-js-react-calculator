@@ -40,7 +40,7 @@ services:
     working_dir: /usr/src/app
     volumes:
       - ./:/usr/src/app
-    command: bash -c "PORT=80 yarn install && yarn start"
+    command: bash -c "yarn install && PORT=80 yarn start"
     healthcheck:
       test: ["CMD-SHELL", "curl -f http://localhost && echo 'OK'"]
       interval: 20s
