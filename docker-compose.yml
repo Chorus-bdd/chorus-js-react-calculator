@@ -47,7 +47,7 @@ services:
       retries: 15
 
   chorus-interpreter:
-    image: chorus-interpreter:latest
+    image: chorusbdd/chorus-interpreter
     ports:
       - "9080:9080"
     depends_on:
