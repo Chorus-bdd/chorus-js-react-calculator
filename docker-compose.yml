@@ -39,7 +39,7 @@ services:
       - "9000:80"
     working_dir: /usr/src/app
     volumes:
-      - ../chorus-js-react-calculator:/usr/src/app
+      - ./:/usr/src/app
     command: bash -c "PORT=80 yarn start"
     healthcheck:
       test: ["CMD-SHELL", "curl -f http://localhost && echo 'OK'"]
