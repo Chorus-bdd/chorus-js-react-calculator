@@ -37,10 +37,9 @@ cleanup() {
 
 info "Starting Docker services..."
 docker-compose up hub firefox chrome chorus-react-calculator > docker-services.log 2>&1 &
-echo "Exit code $?"
 exit_if_failed "Failed to start Docker services"
 
-docker-compose up chorus-interpreter
+docker-compose run chorus-interpreter
 if [ $? -ne 0 ] ; then
   echo "Exit code from Chorus was $?"
   echo "Service logs:"
