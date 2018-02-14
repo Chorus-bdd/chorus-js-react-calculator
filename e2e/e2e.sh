@@ -26,7 +26,7 @@ docker-compose up chorus-interpreter
 LAST_CONTAINER_ID=`docker ps -l -q`
 EXIT_CODE=`docker inspect ${LAST_CONTAINER_ID} --format='{{.State.ExitCode}}'`
 
-if [ ${EXIT_CODE} -ne 0 ] ; then
+if [ "${EXIT_CODE}" -ne 0 ] ; then
   echo "Exit code from Chorus interpreter was ${EXIT_CODE}"
   echo "Service logs:"
   cat docker-services.log
