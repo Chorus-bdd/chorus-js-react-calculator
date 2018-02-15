@@ -1,6 +1,6 @@
 sudo: required
-language: java
-script: cd e2e && ./e2e.sh
+language: javascript
+script: yarn install && yarn e2e
 branches:
   only: master
 cache:
