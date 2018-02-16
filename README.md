@@ -35,7 +35,8 @@ Once you have docker installed and working, then you can run the Chorus features
 
 This will run the script under e2e/e2e.sh, which starts up the docker cluster - and the Chorus image will run all the feature files under ./feature
 
-You can see the chorus tests running in the browser by pointing a VNC client at *vnc://localhost:5912*
+You can see the chorus tests running in the browser by pointing a VNC client at `vnc://localhost:5912`, using pwd `secret` 
+
 This will attach to a vnc server on the docker image running the chrome browser
 Tip - On MacOS, Safari will work :) 
 
