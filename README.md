@@ -41,7 +41,7 @@ This will attach to a vnc server on the docker image running the chrome browser
 Tip - On MacOS, Safari will work :) 
 
 
-[[https://github.com/Chorus-bdd/chorus-js-react-calculator/runningTheInterpreter.png|alt=runningImage]]
+[[https://github.com/Chorus-bdd/chorus-js-react-calculator/blob/master/runningTheInterpreter.png|alt=runningImage]]
 
 
 #### Acknowledgements
