@@ -40,6 +40,10 @@ You can see the chorus tests running in the browser by pointing a VNC client at 
 This will attach to a vnc server on the docker image running the chrome browser
 Tip - On MacOS, Safari will work :) 
 
+
+[[https://github.com/Chorus-bdd/chorus-js-react-calculator/runningTheInterpreter.png|alt=runningImage]]
+
+
 #### Acknowledgements
 
 Thanks to Michael Jackson for open sourcing the original HTML5/CSS Calculator on which this Redux / Chorus conversion was based 
