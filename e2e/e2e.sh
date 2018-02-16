@@ -14,22 +14,24 @@ docker pull selenium/node-chrome-debug:3.9.1
 docker pull node:8.9.1
 
 echo "Starting Docker services..."
-docker-compose up hub chrome chorus-react-calculator > docker-services.log 2>&1 &
+docker-compose up -d
 if [ $? -ne 0 ] ; then
   echo "Failed to start Docker services"
   exit 1
 fi
 
-docker-compose up chorus-interpreter
+# Wait until the other services are reachable before running the chorus command
+DOCKERIZE="dockerize -wait tcp://chrome:5900 -wait tcp://hub:4444 -wait http://chorus-react-calculator:80 -timeout 90s"
+docker-compose exec -T chorus-interpreter ${DOCKERIZE} chorus -c -f /features
 
 # We have to pick up the exit code using docker inspect
-LAST_CONTAINER_ID=`docker ps -l -q`
-EXIT_CODE=`docker inspect ${LAST_CONTAINER_ID} --format='{{.State.ExitCode}}'`
+#LAST_CONTAINER_ID=`docker ps -l -q`
+#EXIT_CODE=`docker inspect ${LAST_CONTAINER_ID} --format='{{.State.ExitCode}}'`
 
-if [ "${EXIT_CODE}" -ne 0 ] ; then
-  echo "Exit code from Chorus interpreter was ${EXIT_CODE}"
+if [ $? -ne 0 ] ; then
+  echo "Exit code from Chorus interpreter was $?"
   echo "Service logs:"
-  cat docker-services.log
+  docker-compose logs
   echo "Tests Failed"
   exit 1
 else
