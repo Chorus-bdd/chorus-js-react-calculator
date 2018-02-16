@@ -24,10 +24,6 @@ fi
 DOCKERIZE="dockerize -wait tcp://chrome:5900 -wait tcp://hub:4444 -wait http://chorus-react-calculator:80 -timeout 90s"
 docker-compose exec -T chorus-interpreter ${DOCKERIZE} chorus -c -f /features
 
-# We have to pick up the exit code using docker inspect
-#LAST_CONTAINER_ID=`docker ps -l -q`
-#EXIT_CODE=`docker inspect ${LAST_CONTAINER_ID} --format='{{.State.ExitCode}}'`
-
 if [ $? -ne 0 ] ; then
   echo "Exit code from Chorus interpreter was $?"
   echo "Service logs:"
