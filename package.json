@@ -19,7 +19,8 @@
     "eject": "react-scripts eject",
     "e2e" : "cd e2e && ./e2e.sh",
     "e2e:start" : "cd e2e && docker-compose up -d",
-    "e2e:stop" : "cd e2e && docker-compose down"
+    "e2e:stop" : "cd e2e && docker-compose down",
+    "e2e:runChorus" : "cd e2e && docker-compose exec -T chorus-interpreter chorus -c -f /features"
   },
   "devDependencies": {
     "redux-devtools": "^3.4.1"
