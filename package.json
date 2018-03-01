@@ -17,7 +17,9 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "e2e" : "cd e2e && ./e2e.sh"
+    "e2e" : "cd e2e && ./e2e.sh",
+    "e2e:start" : "cd e2e && docker-compose up -d",
+    "e2e:stop" : "cd e2e && docker-compose down"
   },
   "devDependencies": {
     "redux-devtools": "^3.4.1"

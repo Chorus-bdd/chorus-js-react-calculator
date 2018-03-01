@@ -6,13 +6,6 @@ cleanup() {
     docker-compose stop
 }
 
-echo "Pulling Docker images.."
-docker pull chorusbdd/chorus-interpreter:3.0.0-DEV32
-docker pull selenium/hub:3.9.1
-docker pull selenium/node-chrome-debug:3.9.1
-#docker pull selenium/node-firefox-debug:3.9.1
-docker pull node:8.9.1
-
 echo "Starting Docker services..."
 docker-compose up -d
 if [ $? -ne 0 ] ; then
