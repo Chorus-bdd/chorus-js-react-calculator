@@ -2,13 +2,18 @@
 
 ## Chorus React-Redux Calculator
 
-A sample project which demonstrates how the Docker packaged Chorus interpreter can be used to test a React / Redux APP
+A sample project which demonstrates how the Docker version of Chorus interpreter can be used to test a React / Redux APP running under Docker compose
 
 *Chorus 3.0.x is an early access build, there may be changes before the official 3.0.0 release* 
 
 ### Building and Running the calculator app locally
 
-You will need yarn and node installed to build the web app locally, and Docker installed to run the tests
+You will need: 
+
+1. Yarn and Node.js installed to build and run the web app locally
+2. Docker and Docker Compose, to run the e2e tests
+
+To install and run the app:
 
 * `yarn install`
 
@@ -18,8 +23,8 @@ Once installed you can start it with
 
 And open a browser at localhost:3000
 
-Although you can run the app locally like this, for chorus testing a docker-compose.yml is included under ./e2e which will start up the 
-app in a Docker container running node, and start up a Chorus and Selenium containers alongside to test it.
+Although you can run the app locally like this, for e2e testing a docker-compose.yml is included under ./e2e which will start up the 
+app in a Docker container node image, and start up a Chorus and Selenium containers alongside it to test it.
 
 ### Running the e2e test suite with Chorus Docker 
 
@@ -36,6 +41,7 @@ You can run the e2e Chorus features with:
 * `yarn e2e`
 
 This will run the script under e2e/e2e.sh, which starts up the docker cluster and runs all the tests under ./feature
+This will start all the containers once and run the test
 
 
 ### Watching the tests running
