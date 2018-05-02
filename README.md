@@ -4,8 +4,6 @@
 
 A sample project which demonstrates how the Docker version of Chorus interpreter can be used to test a React / Redux APP running under Docker compose
 
-*Chorus 3.0.x is an early access build, there may be changes before the official 3.0.0 release* 
-
 ### Building and Running the calculator app locally
 
 You will need: 
