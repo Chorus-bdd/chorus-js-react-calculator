@@ -93,11 +93,16 @@ class CalculatorKey extends React.Component {
 
         return (
             <PointTarget onPoint={onPress}>
-                <button className={`calculator-key ${className}`} {...props}/>
+                <button ref={ (element) => this.context.chorusAddDomElement(`CalculatorKey-${className}`, element) } className={`calculator-key ${className}`} {...props}/>
             </PointTarget>
         )
     }
 }
+
+CalculatorKey.contextTypes = {
+    chorusAddDomElement : PropTypes.func.isRequired,
+    chorusAddReactComponent: PropTypes.func.isRequired
+};
 
 const CalculatorOperations = {
     '/': (prevValue, nextValue) => prevValue / nextValue,

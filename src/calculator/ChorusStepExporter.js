@@ -14,6 +14,8 @@ export default class ChorusStepExporter extends Component {
         
         const { chorusClient, clientOpenedPromise } = this.props;
         
+        const context = this.context;
+        
         clientOpenedPromise.then(() => {
 
             console.log('Chorus Connection Opened!');
@@ -25,21 +27,32 @@ export default class ChorusStepExporter extends Component {
             });
 
             chorusClient.publishStep('.*press the (.*) key', ([key]) => {
-                const button = document.querySelector('.key-' + key);
+                // const button = document.querySelector('.key-' + key);
+                const button = context.getDomElement(`CalculatorKey-key-${key}`);
                 button.click();
             });
 
 
             chorusClient.publishStep('.*the display shows (.*)', ([value]) => {
-                const displayDiv = document.querySelector('.auto-scaling-text');
-                expect(displayDiv.textContent).toBe(value)
+                // const displayDiv = document.querySelector('.auto-scaling-text');
+                // expect(displayDiv.textContent).toBe(value)
+                
+                const div = context.getDomElement('CalculatorDisplay');
+                console.log(`got dom element ${div}`);
+                expect(div.textContent).toBe(value);
             });
             
             chorusClient.stepsAligned();
         })
     }
     
+    
     render() {
         return Children.only(this.props.children);
     }
 }
+
+ChorusStepExporter.contextTypes = {
+    getDomElement : PropTypes.func.isRequired,
+    getReactComponent : PropTypes.func.isRequired
+};
