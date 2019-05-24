@@ -11,7 +11,9 @@ export default class ChorusComponentDictionary extends Component {
 
     static childContextTypes = {
         chorusAddDomElement : PropTypes.func.isRequired,
-        chorusAddReactComponent: PropTypes.func.isRequired
+        chorusAddReactComponent: PropTypes.func.isRequired,
+        getDomElement : PropTypes.func.isRequired,
+        getReactComponent : PropTypes.func.isRequired
     };
 
     state = {
@@ -28,11 +30,21 @@ export default class ChorusComponentDictionary extends Component {
         console.log(`Adding reactComponent at address ${address} ${reactComponent}`);
         this.state.reactComponentsByAddress.set(address, reactComponent);
     };
-
+    
+    getDomElement = (address) => {
+        return this.state.elementsByAddress.get(address)
+    };
+    
+    getReactComponent = (address) => {
+        return this.state.reactComponentsByAddress.get(address)
+    };
+    
     getChildContext() {
         return {
             chorusAddDomElement: this.chorusAddDomElement,
-            chorusAddReactComponent: this.chorusAddReactComponent
+            chorusAddReactComponent: this.chorusAddReactComponent,
+            getDomElement: this.getDomElement,
+            getReactComponent: this.getReactComponent
         };
     }
 
