@@ -4,23 +4,24 @@
   "private": true,
   "dependencies": {
     "chorus-js": "^2.0.1",
-    "react": "^16.0.0",
-    "react-dom": "^16.0.0",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
     "react-redux": "^5.0.6",
     "react-scripts": "1.0.17",
     "redux": "^3.7.2",
     "react-point": "^3.0.1",
-    "expect": "^1.20.2"
+    "expect": "^1.20.2",
+    "prop-types": "^15.6.0"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "e2e" : "cd e2e && ./e2e.sh",
-    "e2e:start" : "cd e2e && docker-compose up -d",
-    "e2e:stop" : "cd e2e && docker-compose down",
-    "e2e:runChorus" : "cd e2e && docker-compose exec chorus-interpreter chorus -c -f /features"
+    "e2e": "cd e2e && ./e2e.sh",
+    "e2e:start": "cd e2e && docker-compose up -d",
+    "e2e:stop": "cd e2e && docker-compose down",
+    "e2e:runChorus": "cd e2e && docker-compose exec chorus-interpreter chorus -c -f /features"
   },
   "devDependencies": {
     "redux-devtools": "^3.4.1"

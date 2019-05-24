@@ -61,13 +61,26 @@ class CalculatorDisplay extends React.Component {
         if (match)
             formattedValue += (/[1-9]/).test(match[0]) ? match[1] : match[0]
 
+        const chorusAddDomElement = ( domElement ) => {
+            this.context.chorusAddDomElement('CalculatorDisplay', domElement);
+        };
+        
+        const chorusAddReactComponent = ( domElement ) => {
+            this.context.chorusAddReactComponent('CalculatorDisplay', domElement);
+        };
+        
         return (
-            <div {...props} className="calculator-display">
-                <AutoScalingText>{formattedValue}</AutoScalingText>
+            <div {...props} className="calculator-display" ref={chorusAddDomElement}>
+                <AutoScalingText ref={chorusAddReactComponent}>{formattedValue}</AutoScalingText>
             </div>
         )
     }
 }
+
+CalculatorDisplay.contextTypes = {
+    chorusAddDomElement : PropTypes.func.isRequired,
+    chorusAddReactComponent: PropTypes.func.isRequired
+};
 
 class CalculatorKey extends React.Component {
     static propTypes = {

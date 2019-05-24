@@ -7,6 +7,7 @@ import { Provider } from 'react-redux'
 import { CalculatorContainer } from './calculator/CalculatorContainer';
 import { reducer } from './calculator/CalculatorDuck';
 import expect from 'expect';
+import ChorusComponentDictionary from "./calculator/ChorusComponentDictionary";
 
 
 clientOpened.then(() => {
@@ -34,7 +35,9 @@ const store = createStore(reducer);
 
 const AppComponent = ReactDOM.render(
     <Provider store={store}>
-        <CalculatorContainer />
+        <ChorusComponentDictionary>
+            <CalculatorContainer />
+        </ChorusComponentDictionary>
     </Provider>,
     document.getElementById('app')
 );
