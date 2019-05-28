@@ -11,20 +11,18 @@ export default class ChorusStepExporter {
 
     publishSteps() {
         
-        const exportSteps = () => {
+        this.clientOpenedPromise.then(() => {
             console.log('Chorus Connection Opened!');
 
             this.chorusClient.publishStep('.*say hello to the console', () => { console.log("Hello"); });
 
             calculatorDisplayStepExporter(this.chorusClient, this.chorusRefDictionary);
-            
+
             calculatorKeyStepExporter(this.chorusClient, this.chorusRefDictionary);
 
             this.chorusClient.stepsAligned();
-        };
-        // exportSteps.bind(this);
-        
-        this.clientOpenedPromise.then(exportSteps);
+            
+        })
     }
 }
 
