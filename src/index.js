@@ -6,19 +6,23 @@ import { createStore } from 'redux'
 import { Provider } from 'react-redux'
 import { CalculatorContainer } from './calculator/CalculatorContainer';
 import { reducer } from './calculator/CalculatorDuck';
-import ChorusComponentDictionary from "./calculator/ChorusComponentDictionary";
-import ChorusStepExporter from "./calculator/ChorusStepExporter";
+import ChorusRefDictionary from "./chorus/ChorusRefDictionary"
+import ChorusDictionaryContextProvider from "./chorus/ChorusDictionaryContextProvider";
+import ChorusStepExporter from "./ChorusStepExporter";
 
 // Store
 const store = createStore(reducer);
 
+const chorusRefDictionary = new ChorusRefDictionary();
+
+const stepExporter = new ChorusStepExporter(client, clientOpened, chorusRefDictionary);
+stepExporter.publishSteps();
+
 ReactDOM.render(
     <Provider store={store}>
-        <ChorusComponentDictionary>
-            <ChorusStepExporter chorusClient={client} clientOpenedPromise={clientOpened}>
-                <CalculatorContainer />
-            </ChorusStepExporter>
-        </ChorusComponentDictionary>
+        <ChorusDictionaryContextProvider chorusRefDictionary={chorusRefDictionary}>
+            <CalculatorContainer />
+        </ChorusDictionaryContextProvider>
     </Provider>,
     document.getElementById('app')
 );
