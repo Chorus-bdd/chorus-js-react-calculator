@@ -2,7 +2,7 @@ import React from 'react';
 import PointTarget from 'react-point';
 import PropTypes from 'prop-types';
 
-class CalculatorKey extends React.Component {
+export default class CalculatorKey extends React.Component {
     static propTypes = {
         onPress: PropTypes.func.isRequired,
         className: PropTypes.string.isRequired
@@ -13,7 +13,7 @@ class CalculatorKey extends React.Component {
 
         return (
             <PointTarget onPoint={onPress}>
-                <button ref={ (element) => this.context.chorusRefDictionary.addDomElement(`CalculatorKey-${className}`, element) } className={`calculator-key ${className}`} {...props}/>
+                <button ref={ (element) => this.context.chorusRefDictionary.setDomElement(`CalculatorKey-${className}`, element) } className={`calculator-key ${className}`} {...props}/>
             </PointTarget>
         )
     }
@@ -23,15 +23,3 @@ CalculatorKey.contextTypes = {
     chorusRefDictionary: PropTypes.object.isRequired
 };
 
-
-const calculatorKeyStepExporter = (chorusClient, chorusRefDictionary) => {
-
-    chorusClient.publishStep('.*press the (.*) key', ([key]) => {
-        // const button = document.querySelector('.key-' + key);
-        const button = chorusRefDictionary.getDomElement(`CalculatorKey-key-${key}`);
-        button.click();
-    });
-
-};
-
-export { CalculatorKey, calculatorKeyStepExporter }

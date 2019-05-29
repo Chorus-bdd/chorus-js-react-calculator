@@ -1,3 +1,6 @@
+/**
+ * Provide a chorusRefDictionary in the React context to child components
+ */
 
 import { Component, Children } from 'react';
 import PropTypes from 'prop-types';

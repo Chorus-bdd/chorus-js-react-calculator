@@ -10,13 +10,13 @@ import ChorusRefDictionary from "./chorus/ChorusRefDictionary"
 import ChorusDictionaryContextProvider from "./chorus/ChorusDictionaryContextProvider";
 import ChorusStepExporter from "./ChorusStepExporter";
 
-// Store
 const store = createStore(reducer);
 
+// Chorus Ref Dictionary to store React components and HTML elements for use in Chorus test stepsj
 const chorusRefDictionary = new ChorusRefDictionary();
 
-const stepExporter = new ChorusStepExporter(client, clientOpened, chorusRefDictionary);
-stepExporter.publishSteps();
+// Publish chorus test step definitions to the Chorus interpreter back end once connected
+new ChorusStepExporter(client, clientOpened, chorusRefDictionary).publishSteps();
 
 ReactDOM.render(
     <Provider store={store}>

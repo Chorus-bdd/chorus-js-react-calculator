@@ -1,9 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import AutoScalingText from './AutoScalingText'
-import expect from 'expect/lib';
 
-class CalculatorDisplay extends React.Component {
+export default class CalculatorDisplay extends React.Component {
     static propTypes = {
         value: PropTypes.string.isRequired
     };
@@ -24,11 +23,11 @@ class CalculatorDisplay extends React.Component {
             formattedValue += (/[1-9]/).test(match[0]) ? match[1] : match[0]
 
         const chorusAddDomElement = ( domElement ) => {
-            this.context.chorusRefDictionary.addDomElement('CalculatorDisplay', domElement);
+            this.context.chorusRefDictionary.setDomElement('CalculatorDisplay', domElement);
         };
 
         const chorusAddReactComponent = ( domElement ) => {
-            this.context.chorusRefDictionary.addReactComponent('CalculatorDisplay', domElement);
+            this.context.chorusRefDictionary.setReactComponent('CalculatorDisplay', domElement);
         };
 
         return (
@@ -42,20 +41,3 @@ class CalculatorDisplay extends React.Component {
 CalculatorDisplay.contextTypes = {
     chorusRefDictionary: PropTypes.object.isRequired
 };
-
-
-
-const calculatorDisplayStepExporter = (chorusClient, chorusRefDictionary) => {
-
-    chorusClient.publishStep('.*the display shows (.*)', ([value]) => {
-        // const displayDiv = document.querySelector('.auto-scaling-text');
-        // expect(displayDiv.textContent).toBe(value)
-
-        const div = chorusRefDictionary.getDomElement('CalculatorDisplay');
-        console.log(`got dom element ${div}`);
-        expect(div.textContent).toBe(value);
-    });
-    
-}; 
-
-export { CalculatorDisplay, calculatorDisplayStepExporter }

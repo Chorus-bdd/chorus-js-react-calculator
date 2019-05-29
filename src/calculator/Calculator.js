@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { CalculatorDisplay } from './CalculatorDisplay'
-import { CalculatorKey } from './CalculatorKey'
+import CalculatorDisplay from './CalculatorDisplay'
+import CalculatorKey from './CalculatorKey'
 
 const CalculatorOperations = {
     '/': (prevValue, nextValue) => prevValue / nextValue,

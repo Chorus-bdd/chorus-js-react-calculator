@@ -1,5 +1,5 @@
-import { calculatorDisplayStepExporter } from './calculator/CalculatorDisplay';
-import { calculatorKeyStepExporter } from './calculator/CalculatorKey';
+import publishCalculatorDisplaySteps from './calculator/CalculatorDisplay.steps';
+import publishCalculatorKeySteps from './calculator/CalculatorKey.steps';
 
 export default class ChorusStepExporter {
     
@@ -16,9 +16,9 @@ export default class ChorusStepExporter {
 
             this.chorusClient.publishStep('.*say hello to the console', () => { console.log("Hello"); });
 
-            calculatorDisplayStepExporter(this.chorusClient, this.chorusRefDictionary);
+            publishCalculatorDisplaySteps(this.chorusClient, this.chorusRefDictionary);
 
-            calculatorKeyStepExporter(this.chorusClient, this.chorusRefDictionary);
+            publishCalculatorKeySteps(this.chorusClient, this.chorusRefDictionary);
 
             this.chorusClient.stepsAligned();
             

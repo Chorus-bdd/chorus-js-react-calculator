@@ -1,3 +1,9 @@
+/**
+ * Maintain a map of React component instances and HTMLElements for use in Chorus steps
+ * 
+ * Provide functions to populate the dictionary (by React refs when components are mounted in the React lifecycle)
+ * and functions to look up elements when a Chorus test executes.
+ */
 
 export default class ChorusRefDictionary{
 
@@ -6,14 +12,22 @@ export default class ChorusRefDictionary{
         this.elementsByAddress = new Map();
     }
 
-    addDomElement(address, domElement) {
-        console.log(`Adding domElement at address ${address} ${domElement}`);
-        this.elementsByAddress.set(address, domElement);
+    setDomElement(address, domElement) {
+        // console.log(`Adding domElement at address ${address} ${domElement}`);
+        if ( domElement ) {
+            this.elementsByAddress.set(address, domElement);
+        } else {
+            this.elementsByAddress.delete(address);
+        }
     };
 
-    addReactComponent(address, reactComponent) {
-        console.log(`Adding reactComponent at address ${address} ${reactComponent}`);
-        this.reactComponentsByAddress.set(address, reactComponent);
+    setReactComponent(address, reactComponent) {
+        // console.log(`Adding reactComponent at address ${address} ${reactComponent}`);
+        if ( reactComponent ) {
+            this.reactComponentsByAddress.set(address, reactComponent);
+        } else {
+            this.reactComponentsByAddress.delete(address);
+        }
     };
 
     getDomElement(address) {
